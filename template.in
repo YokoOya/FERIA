@@ -1,0 +1,57 @@
+parameter	# Name of the output fits file, 'parameter' to name after the parameters
+n           # Overwrite? (y/n)
+
+### Parameters for the source ###
+IRAS16293-2422_A1			# Name of the object
+ICRS						# Equinox or Radesys ('J2000' or 'ICRS')
+16h32m22.878s				# Right Ascension of the field center
+-24d28m36.69s				# Declination of the field center
+2.9             			# Systemic Velocity (km/s)
+
+### Parameters for the line ###
+H2CS707						# Name of the line
+240.2668724					# Restfrequency of the line (GHz)
+
+
+### Parameters for the field ###
+0.02		# Pixel size (arcsec)
+0.05		# Velocity resolution (km/s)
+
+### Parameters for IRE ###
+140			# Distance to the source (pc)
+0.8	 		# Protostellar mass (Msun)
+50			# Radius of the centrifugal barrier (au)
+-80			# Inclination angle of the disk/envelope system (degree; 0 deg for a face-on configuration)
+50			# Position angle of the line along which the disk/envelope system is extended
+1			# Direction of the rotation: -1 for counterclockwise, 1 for clockwise for the inclination angle of 0 deg
+300			# Outer radius of the infalling-rotating envelope
+50			# Inner radius of the infalling-rotating envelope
+
+0			# Scale height of the infalling-rotating envelope
+30			# Flared degree of the scale hight of the infalling-rotating envelope
+-1.5		# Density profile (IRE): log(n(H2)) / log(r)
+0.0			# Temperature profile (IRE): log(T) / log(r)
+
+0			# Scale height of the Keplerian disk
+30			# Flared degree of the scale hight of the Keplerian disk
+-1.5		# Density profile (Kepler): log(n(H2)) / log(r)
+0.0			# Temperature profile (Kepler): log(T) / log(r)
+
+1e8			# H2 density at the centrifugal barrier (cm^-3)
+1e-10		# Fractional density = n(X) / n(H2)
+10          # Temperature at the centrifugal barrier (K)
+
+
+1.0			# Linewidth (km/s) (FWHM)
+0.118		# Beam size: major axis (arcsec)
+0.077		# Beam size: minor axis (arcsec)
+-85.842		# Beam: position angle of the major axis (degree)
+
+y			# Normalize the intensity by the maximum value in the cube? (y/n)
+
+### the position axis in the PV diagram ###
+200.		# position angle of the position axis (deg)
+-8.			# offset in RA for the origin of the position axis (au)
+-11.		# offset in Dec for the origin of the position axis (au)
+
+
