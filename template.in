@@ -23,7 +23,7 @@ H2CS707						# Name of the line
 50			# Radius of the centrifugal barrier (au)
 -80			# Inclination angle of the disk/envelope system (degree; 0 deg for a face-on configuration)
 50			# Position angle of the line along which the disk/envelope system is extended
-1			# Direction of the rotation: -1 for counterclockwise, 1 for clockwise for the inclination angle of 0 deg
+-1			# Direction of the rotation: 1 for counterclockwise, -1 for clockwise for the inclination angle of 0 deg
 300			# Outer radius of the infalling-rotating envelope
 50			# Inner radius of the infalling-rotating envelope
 
