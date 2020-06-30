@@ -73,6 +73,10 @@ make
 ```
 
 
+## References 
+CFITSIO:  Pence, W. (1999) in ASP Conf. Ser., Vol. 172, Astronomical Data Analysis Software and Systems VIII, ed. D. Mehringer, R. Plante, and D. Roberts (San Francisco: ASP), 487
+FERIA: Oya, Y., and Yamamoto, S. (in prep.)
+
 ### Contact 
 - GitHub: [https://github.com/YokoOya/feria](https://github.com/YokoOya/feria)
 - e-Mail: Yoko Oya (oya_at_taurus.phys.s.u-tokyo.ac.jp)

@@ -79,22 +79,22 @@ void ireModel::env_vel(double dist_protostar, double r, double theta, double z, 
 }
 
 double ireModel::env_dens(double dist_protostar, double r, double theta, double z, int velStrID) {
-    double ans = densCB;
+    double ans = 0.;
     //*Edit below if you want to calculate the density. //
 	
-    if (velStrID == isIRE) ans *= pow(dist_protostar / rCB, densProfIRE);
-	if (velStrID == isKEP) ans *= pow(dist_protostar / rCB, densProfKEP);
+    if (velStrID == isIRE) ans = densCB * pow(dist_protostar / rCB, densProfIRE);
+	if (velStrID == isKEP) ans = densCB * pow(dist_protostar / rCB, densProfKEP);
 
     //Edit above if you want to calculate the density. */
     return ans;
 }
 
 double ireModel::env_temp(double dist_protostar, double r, double theta, double z, int velStrID) {
-    double ans = TempCB;
+    double ans = 0.;
     //*Edit below if you want to calculate the temperature. //
     
-	if (velStrID == isIRE) ans *= pow(dist_protostar / rCB, tempProfIRE);
-	if (velStrID == isKEP) ans *= pow(dist_protostar / rCB, tempProfKEP);
+	if (velStrID == isIRE) ans = TempCB * pow(dist_protostar / rCB, tempProfIRE);
+	if (velStrID == isKEP) ans = TempCB * pow(dist_protostar / rCB, tempProfKEP);
 
     //Edit above if you want to calculate the temperature. */
     return ans;

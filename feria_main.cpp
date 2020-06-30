@@ -11,7 +11,7 @@ int main() {
 	//
 
     //---Input---//
-    char buff[lstr][lstr], filename_cubefits[lstr], filename_PVfits[lstr], name_line[lstr], name_object[lstr], radesys[lstr], center_ra[lstr], center_dec[lstr], dummy_char;
+    char buff[lstr][lstr], filename_cubefits[lfilename], filename_PVfits[lfilename], name_line[lstr], name_object[lstr], radesys[lstr], center_ra[lstr], center_dec[lstr], dummy_char;
 	double Fldres_as, Velres_kmps, distance_pc, mass_msun, rCB_au, inc_deg, PA_deg, rot_sign, Rout_au, Rin_au;
 	double HeightIRE_au, FlareIRE_deg, HeightKEP_au, FlareKEP_deg;
     double H2densityCB, densityProfileIRE, densityProfileKEP, fractionalDensity;
@@ -213,7 +213,7 @@ int main() {
 		
 		sky.setMaxMin();
 		sky.getMaxMin(&maxval, &minval);
-		printf("\n\t\tCube: max = %e, min = %e, sum = %e\n", maxval, minval, sky.getSum());
+		//printf("\n\t\tCube: max = %e, min = %e, sum = %e\n", maxval, minval, sky.getSum());
 
 	}
 	if (f_makecube) {
@@ -287,7 +287,7 @@ int main() {
 		//*/
 		
 		sky.setMaxMin();
-		/*Comment
+		//*Comment
 		sky.getMaxMin(&maxval, &minval);
 		printf("\n\t\tCube (before normalize): max = %e, min = %e, sum = %e\n", maxval, minval, sky.getSum());
 		//*/
