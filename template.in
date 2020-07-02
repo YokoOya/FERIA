@@ -38,7 +38,7 @@ H2CS707						# Name of the line
 0.0			# Temperature profile (Kepler): log(T) / log(r)
 
 1e8			# H2 density at the centrifugal barrier (cm^-3)
-1e-10		# Fractional density = n(X) / n(H2)
+1e-10		# Fractional abundance = n(X) / n(H2)
 10          # Temperature at the centrifugal barrier (K)
 
 
