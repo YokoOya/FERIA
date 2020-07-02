@@ -40,8 +40,9 @@ ireModel::ireModel(double mass_msun, double rCB_au, double inc_deg, double PA_de
 
 
 int ireModel::which_velStr(double dist_protostar, double r, double theta, double z) {
-	if (dist_protostar > Rout || r < Rin || dist_protostar <= EPS) return noGAS;
-	
+	if (dist_protostar > Rout || dist_protostar < Rin || dist_protostar <= EPS) return noGAS;
+	//if (r > Rout || r < Rin || r <= EPS) return noGAS; // for vertical edge
+
 	if (dist_protostar >= rCB) {
 		if (fabs(z) < r * tanFlareIRE + HeightIRE / 2.) return isIRE;
 	} else {

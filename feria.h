@@ -16,7 +16,7 @@ typedef complex<double> dcomp;
 
 //---- Header ---//
 const int logNpix = 8;
-const int logNvel = 9;
+const int logNvel = 8;
 
 //---- Constant ---//
 const double EPS = 1e-308;
