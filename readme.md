@@ -40,7 +40,7 @@ You need to edit the following files.
 ### template.in
 - Template for the input file.
 - This file includes the parameters for the model.
-- See comments in the file for the details of the parameterss.
+- See comments in the file for the details of the parameters.
 
 ### (Optional) feria_varParameters.py
 - This python script makes fits files for various parameter sets.
