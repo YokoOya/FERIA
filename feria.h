@@ -15,8 +15,8 @@ using namespace std;
 typedef complex<double> dcomp; 
 
 //---- Header ---//
-const int logNpix = 8;
-const int logNvel = 8;
+const int lbNpix = 8;
+const int lbNvel = 8;
 
 //---- Constant ---//
 const double EPS = 1e-308;
@@ -41,8 +41,8 @@ const char PARAMSNAME[] = "parameter";
 const char EQUINOX[] = "J2000";
 
 //---- Axis ---//
-const int npix = 1 << logNpix;
-const int nvel = 1 << logNvel;
+const int npix = 1 << lbNpix;
+const int nvel = 1 << lbNvel;
 const int XAXIS = 0;
 const int rAXIS = 0;
 const int YAXIS = 1;
