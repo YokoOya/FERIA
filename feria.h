@@ -15,8 +15,8 @@ using namespace std;
 typedef complex<double> dcomp; 
 
 //---- Header ---//
-const int lbNpix = 5;
-const int lbNvel = 5;
+const int lbNpix = 7;
+const int lbNvel = 7;
 
 //---- Constant ---//
 const double EPS = 1e-308;
