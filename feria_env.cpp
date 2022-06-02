@@ -13,7 +13,7 @@ public:
 	double velrot_CB_xrCB;
 /*/////
 
-ireModel::ireModel(double mass_msun, double rCB_au, double inc_deg, double PA_deg, double rot_sign, double Rout_au, double Rin_au, double HeightIRE_au, double FlareIRE_deg, double HeightKEP_au, double FlareKEP_deg, double H2densityCB, double densityProfileIRE, double densityProfileKEP, double fractionalDensity, double TempCB_in, double tempProfileIRE, double tempProfileKEP) {
+ireModel::ireModel(double mass_msun, double rCB_au, double inc_deg, double PA_deg, double rot_sign, double Rout_au, double Rin_au, double HeightIRE_au, double FlareIRE_deg, double HeightKEP_au, double FlareKEP_deg, double DensCB_in, double densityProfileIRE, double densityProfileKEP, double TempCB_in, double tempProfileIRE, double tempProfileKEP) {
     mass_grav = mass_msun * Msun * Grav;
     rCB = rCB_au * CMperAU;
     inc = inc_deg / DEGperRAD;
@@ -27,7 +27,7 @@ ireModel::ireModel(double mass_msun, double rCB_au, double inc_deg, double PA_de
 	HeightKEP = HeightKEP_au * CMperAU;
 	tanFlareKEP = tan(FlareKEP_deg / DEGperRAD / 2.);
 
-	densCB = H2densityCB * fractionalDensity;
+	DensCB = DensCB_in;
     densProfIRE = densityProfileIRE;
 	densProfKEP = densityProfileKEP;
 	
@@ -83,8 +83,8 @@ double ireModel::env_dens(double dist_protostar, double r, double theta, double 
     double ans = 0.;
     //*Edit below if you want to calculate the density. //
 	
-    if (velStrID == isIRE) ans = densCB * pow(dist_protostar / rCB, densProfIRE);
-	if (velStrID == isKEP) ans = densCB * pow(dist_protostar / rCB, densProfKEP);
+    if (velStrID == isIRE) ans = DensCB * pow(dist_protostar / rCB, densProfIRE);
+	if (velStrID == isKEP) ans = DensCB * pow(dist_protostar / rCB, densProfKEP);
 
     //Edit above if you want to calculate the density. */
     return ans;

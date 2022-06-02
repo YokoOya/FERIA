@@ -15,8 +15,8 @@ using namespace std;
 typedef complex<double> dcomp; 
 
 //---- Header ---//
-const int lbNpix = 8;
-const int lbNvel = 8;
+const int lbNpix = 5;
+const int lbNvel = 5;
 
 //---- Constant ---//
 const double EPS = 1e-308;
@@ -101,10 +101,10 @@ public:
 class ireModel {
 public:
 	double mass_grav, rCB, inc, rot, PA, Rout, Rin, HeightIRE, tanFlareIRE, HeightKEP, tanFlareKEP;
-	double densCB, densProfIRE, densProfKEP, TempCB, tempProfIRE, tempProfKEP;
+	double DensCB, densProfIRE, densProfKEP, TempCB, tempProfIRE, tempProfKEP;
 	double velrot_CB_xrCB;
 	
-    ireModel(double mass_msun, double rCB_au, double inc_deg, double PA_deg, double rot_sign, double Rout_au, double Rin_au, double HeightIRE_au, double FlareIRE_deg, double HeightKEP_au, double FlareKEP_deg, double H2densityCB, double densityProfileIRE, double densityProfileKEP, double fractionalDensity, double TempCB_in, double tempProfileIRE, double tempProfileKEP);
+    ireModel(double mass_msun, double rCB_au, double inc_deg, double PA_deg, double rot_sign, double Rout_au, double Rin_au, double HeightIRE_au, double FlareIRE_deg, double HeightKEP_au, double FlareKEP_deg, double DensCB_in, double densityProfileIRE, double densityProfileKEP, double TempCB_in, double tempProfileIRE, double tempProfileKEP);
 	
 	int which_velStr(double dist_protostar, double r, double theta, double z);
     void env_vel(double dist_protostar, double r, double theta, double z, double *vel_polar, int velStrID);
@@ -118,12 +118,12 @@ public:
 	char outputfilename[lstr], name_line[lstr], name_object[lstr], radesys[lstr], centRa_hms[lstr], centDec_dms[lstr];
 	double Fldres_as, Velres_kmps, distance_pc, mass_msun, rCB_au, inc_deg, PA_deg, rot_sign, Rout_au, Rin_au;
 	double HeightIRE_au, FlareIRE_deg, HeightKEP_au, FlareKEP_deg;
-	double H2densityCB, densityProfileIRE, densityProfileKEP, fractionalDensity;
+	double DensCB, densityProfileIRE, densityProfileKEP;
 	double TempCB, tempProfileIRE, tempProfileKEP;
 	double linewidth_cmps, beam_maj_as, beam_min_as, beam_pa_deg;
 	double restfreq_Hz, centRa[3], centDec[3], centRa_deg, centDec_deg, centRa_scaled_as, centDec_as, Vsys_cmps;
 	
-	sourceParams(char *outputfilename_in, double Fldres_in, double Velres_in, double distance_pc_in, double mass_msun_in, double rCB_au_in, double inc_deg_in, double PA_deg_in, double rot_sign_in, double Rout_au_in, double Rin_au_in, double HeightIRE_au_in, double FlareIRE_deg_in, double HeightKEP_au_in, double FlareKEP_deg_in, double H2densityCB_in, double densityProfileIRE_in, double densityProfileKEP_in, double fractionalDensity_in, double TempCB_in, double tempProfileIRE_in, double tempProfileKEP_in, double linewidth_kmps_in, double beam_maj_as_in, double beam_min_as_in, double beam_pa_deg_in, char* name_line_in, double restfreq_GHz_in, char* name_object_in, char* radesys_in, char* center_ra_in, char* center_dec_in, double Vsys_kmps_in);
+	sourceParams(char *outputfilename_in, double Fldres_in, double Velres_in, double distance_pc_in, double mass_msun_in, double rCB_au_in, double inc_deg_in, double PA_deg_in, double rot_sign_in, double Rout_au_in, double Rin_au_in, double HeightIRE_au_in, double FlareIRE_deg_in, double HeightKEP_au_in, double FlareKEP_deg_in, double DensCB_in, double densityProfileIRE_in, double densityProfileKEP_in, double TempCB_in, double tempProfileIRE_in, double tempProfileKEP_in, double linewidth_kmps_in, double beam_maj_as_in, double beam_min_as_in, double beam_pa_deg_in, char* name_line_in, double restfreq_GHz_in, char* name_object_in, char* radesys_in, char* center_ra_in, char* center_dec_in, double Vsys_kmps_in);
 	~sourceParams();
 };
 

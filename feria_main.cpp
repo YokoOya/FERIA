@@ -14,7 +14,7 @@ int main() {
     char buff[lstr][lstr], filename_cubefits[lfilename], filename_PVfits[lfilename], name_line[lstr], name_object[lstr], radesys[lstr], center_ra[lstr], center_dec[lstr], dummy_char;
 	double Fldres_as, Velres_kmps, distance_pc, mass_msun, rCB_au, inc_deg, PA_deg, rot_sign, Rout_au, Rin_au;
 	double HeightIRE_au, FlareIRE_deg, HeightKEP_au, FlareKEP_deg;
-    double H2densityCB, densityProfileIRE, densityProfileKEP, fractionalDensity;
+	double DensCB, densityProfileIRE, densityProfileKEP;
     double TempCB, tempProfileIRE, tempProfileKEP;
     double linewidth_kmps, beam_maj_as, beam_min_as, beam_pa_deg;
     double restfreq_GHz, Vsys_kmps;
@@ -92,8 +92,7 @@ int main() {
 	sscanf(buff[++ind], "%lf ", &tempProfileKEP);
 	paramnameIDList[++paramnameID] = ind;
 
-    sscanf(buff[++ind], "%lf ", &H2densityCB);
-    sscanf(buff[++ind], "%lf ", &fractionalDensity);
+    sscanf(buff[++ind], "%lf ", &DensCB);
     sscanf(buff[++ind], "%lf ", &TempCB);
 
     sscanf(buff[++ind], "%lf ", &linewidth_kmps);
@@ -122,7 +121,7 @@ int main() {
 	puts("\n----------\n");
     
     //---Parameters---//
-    sourceParams source(filename_cubefits, Fldres_as, Velres_kmps, distance_pc, mass_msun, rCB_au, inc_deg, PA_deg, rot_sign, Rout_au, Rin_au, HeightIRE_au, FlareIRE_deg, HeightKEP_au, FlareKEP_deg, H2densityCB, densityProfileIRE, densityProfileKEP, fractionalDensity, TempCB, tempProfileIRE, tempProfileKEP, linewidth_kmps, beam_maj_as, beam_min_as, beam_pa_deg, name_line, restfreq_GHz, name_object, radesys, center_ra, center_dec, Vsys_kmps);
+    sourceParams source(filename_cubefits, Fldres_as, Velres_kmps, distance_pc, mass_msun, rCB_au, inc_deg, PA_deg, rot_sign, Rout_au, Rin_au, HeightIRE_au, FlareIRE_deg, HeightKEP_au, FlareKEP_deg, DensCB, densityProfileIRE, densityProfileKEP, TempCB, tempProfileIRE, tempProfileKEP, linewidth_kmps, beam_maj_as, beam_min_as, beam_pa_deg, name_line, restfreq_GHz, name_object, radesys, center_ra, center_dec, Vsys_kmps);
     
     //---Output file (cube)---//
 	char paramnameList[lstr][lstr] = {"", "-Vsys", "_Line", "_Pix", "as", "kmps_D", "M", "CB", "I", "PA", "Rot", "Rout", "Rin", "_IRE-T", "Flare", "Nprof", "Tprof", "_Kep-T", "Flare", "Nprof", "Tprof", "_LW", "_Beam", "x", "PA"};		// list of the parameters for the name of the filename_cubefits
@@ -220,7 +219,7 @@ int main() {
 		//---Make 3D IRE---//
 		
 		printf("\n\nMake a fits file:\n\t'%s'\n", filename_cubefits);
-		ireModel ire_model(mass_msun, rCB_au, inc_deg, PA_deg, rot_sign, Rout_au, Rin_au, HeightIRE_au, FlareIRE_deg, HeightKEP_au, FlareKEP_deg, H2densityCB, densityProfileIRE, densityProfileKEP, fractionalDensity, TempCB, tempProfileIRE, tempProfileKEP);
+		ireModel ire_model(mass_msun, rCB_au, inc_deg, PA_deg, rot_sign, Rout_au, Rin_au, HeightIRE_au, FlareIRE_deg, HeightKEP_au, FlareKEP_deg, DensCB, densityProfileIRE, densityProfileKEP, TempCB, tempProfileIRE, tempProfileKEP);
 		
 		double meshCrpix[naxis], meshCrval_au[naxis], meshCdelt_au[naxis];
 		for (int i = 0; i < naxis; ++i) {
