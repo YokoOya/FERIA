@@ -26,7 +26,7 @@ CBList = ['30.', '100.', '300.']
 IList = ['0.', '30.', '60.', '90.']
 PAList = ['50']
 RotList = ['1']
-RoutList = ['30']
+RoutList = ['300.']
 RinList = ['0']
 
 ireHeightList = ['0']
