@@ -93,7 +93,7 @@ void skyPlane::projection(int ix, int iy, double (*gasColumn)[ndata]) {
 		
 		//*Edit below if you want to calculate the emissivity. //
 		
-		emit = gasColumn[iz][NVAL]; // * gasColumn[iz][TVAL];
+		emit = gasColumn[iz][NVAL] * gasColumn[iz][TVAL];
 		
 		//*Edit above if you want to calculate the emissivity. */
 
