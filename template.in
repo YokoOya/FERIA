@@ -29,12 +29,12 @@ H2CS707						# Name of the line
 
 0			# Scale height of the infalling-rotating envelope
 30			# Flared angle of the scale height of the infalling-rotating envelope
--1.5		# Density profile (IRE): log(n(H2)) / log(r)
+-1.5		# Density profile (IRE): log(n(X)) / log(r)
 0.0			# Temperature profile (IRE): log(T) / log(r)
 
 0			# Scale height of the Keplerian disk
 30			# Flared degree of the scale hight of the Keplerian disk
--1.5		# Density profile (Kepler): log(n(H2)) / log(r)
+-1.5		# Density profile (Kepler): log(n(X)) / log(r)
 0.0			# Temperature profile (Kepler): log(T) / log(r)
 
 1e-2		# Molecular density at the centrifugal barrier (cm^-3)
