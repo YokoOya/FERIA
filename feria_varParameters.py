@@ -99,11 +99,11 @@ def makeCube(D, M, CB, I,
 
 	f_cubein.write("%s\t# Scale height of the infalling-rotating envelope\n" % ireHeight)
 	f_cubein.write("%s\t# Flared degree of the scale hight of the infalling-rotating envelope\n" % ireFlare)
-	f_cubein.write("%s\t# Density profile (IRE): log(n(H2)) / log(r)\n" % ireNProf)
+	f_cubein.write("%s\t# Density profile (IRE): log(n(X)) / log(r)\n" % ireNProf)
 	f_cubein.write("%s\t# Temperature profile (IRE): log(T) / log(r)\n" % ireTProf)
 	f_cubein.write("%s\t# Scale height of the Keplerian disk\n" % kepHeight)
 	f_cubein.write("%s\t# Flared degree of the scale hight of the Keplerian disk\n" % kepFlare)
-	f_cubein.write("%s\t# Density profile (Kepler): log(n(H2)) / log(r)\n" % kepNProf)
+	f_cubein.write("%s\t# Density profile (Kepler): log(n(X)) / log(r)\n" % kepNProf)
 	f_cubein.write("%s\t# Temperature profile (Kepler): log(T) / log(r)\n" % kepTProf)
 	f_cubein.write("%s\t# Molecular density at the centrifugal barrier (cm^-3)\n" % CBD)
 	f_cubein.write("%s\t# Temperature at the centrifugal barrier (K)\n" % CBT)
