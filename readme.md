@@ -3,7 +3,7 @@ Fits files of a cube data and a position-velocity diagram are created.
 This program uses [CFITSIO library](https://heasarc.gsfc.nasa.gov/fitsio/).
 
 
-The formalism adopted in this program and how to use it are summarized in **Oya et al. (in prep.)** ([url for the literature will be added]()). 
+The formalism adopted in this program and how to use it are summarized in [Oya et al. (2022)](https://ui.adsabs.harvard.edu/abs/2022PASP..134i4301O/abstract). 
 
 
 # Contents
